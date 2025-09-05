@@ -3,34 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | My Tutorial Hub</title>
-  <link rel="stylesheet" href="style.css"> <!-- reuse your CSS -->
+  <title>Lost in the Future - 404</title>
   <style>
     body {
+      background: radial-gradient(circle at center, #0f0f0f, #000);
+      color: #00ffea;
+      font-family: 'Courier New', Courier, monospace;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
       flex-direction: column;
-      text-align: center;
-      background: #f9f9f9;
-      font-family: sans-serif;
+      overflow: hidden;
     }
-    h1 { font-size: 3rem; margin-bottom: 20px; }
-    a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #007bff;
-      color: #fff;
+
+    .glitch {
+      font-size: 5rem;
+      font-weight: bold;
+      position: relative;
+      animation: flicker 2s infinite;
+      letter-spacing: 4px;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 
+          0 0 5px #00ffea, 
+          0 0 10px #00ffea,
+          0 0 20px #ff00de,
+          0 0 40px #ff00de;
+      }
+      20%, 24%, 55% {
+        text-shadow: none;
+      }
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    .portal {
+      margin: 30px 0;
+      width: 150px;
+      height: 150px;
+      border: 3px solid #00ffea;
+      border-radius: 50%;
+      animation: spin 6s linear infinite, glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes glow {
+      from { box-shadow: 0 0 10px #00ffea; }
+      to { box-shadow: 0 0 40px #ff00de; }
+    }
+
+    .link {
+      margin-top: 20px;
+      color: #ff00de;
       text-decoration: none;
+      border: 1px solid #ff00de;
+      padding: 10px 20px;
       border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .link:hover {
+      background: #ff00de;
+      color: black;
     }
   </style>
 </head>
 <body>
-  <h1>😕 404 – Page Not Found</h1>
-  <p>Looks like you’re lost. Don’t worry, let’s get you back on track.</p>
-  <a href="/my-website/">⬅ Back to Home</a>
+  <div class="glitch">404</div>
+  <div class="portal"></div>
+  <p>You slipped into a <strong>time void</strong> 🌀</p>
+  <a class="link" href="index.html">Return to Home</a>
 </body>
 </html>

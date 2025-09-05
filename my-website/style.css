@@ -689,3 +689,31 @@ nav .links { display:flex; flex-wrap:wrap; gap:12px; }
 @media (min-width: 900px) {
   .t-card { flex-basis: 30%; }
 }
+/* Multistone Landing Page Styles */
+#universe {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Behind the text */
+}
+
+.landing-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+#logo {
+  font-size: 3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+body {
+  overflow-x: hidden;
+}
