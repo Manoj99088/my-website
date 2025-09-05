@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ - My Tutorial Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+      cursor: pointer;
+    }
+    .faq-item h2 {
+      margin: 0;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item p {
+      display: none;
+      margin-top: 10px;
+      color: #444;
+    }
+    .faq-item.active p {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="programming.html">Programming</a>
+      <a href="gamedev.html">Game Dev</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="spacer"></div>
+    <button id="theme-toggle">🌙 Dark</button>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page fade-in faq-container">
+    <h1>Frequently Asked Questions ❓</h1>
+
+    <div class="faq-item">
+      <h2>Which programming language should I start with? <span>➕</span></h2>
+      <p>Start with Python. It’s beginner-friendly, powerful, and widely used in AI, web, and automation.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Unity or Unreal — which game engine is better? <span>➕</span></h2>
+      <p>Unity is better for beginners and mobile games. Unreal is better for realistic graphics and AAA projects.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>How much time will it take to learn coding? <span>➕</span></h2>
+      <p>If you practice daily, you can build projects in 3–6 months. Consistency matters more than speed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h2>Can I become a game developer without coding? <span>➕</span></h2>
+      <p>Yes! Unreal Engine Blueprints and visual scripting tools let you create games without much coding. But coding makes you more powerful.</p>
+    </div>
+
+    <div class="faq-item">
+  <h2>Do I need a powerful PC to start coding? <span>➕</span></h2>
+  <p>No! You can start coding even on a basic laptop. For web development, any modern browser is enough. A stronger PC is only needed for heavy tasks like game dev or AI training.</p>
+</div>
+
+<div class="faq-item">
+  <h2>Can I code on my phone? <span>➕</span></h2>
+  <p>Yes, you can use apps like Termux, Pydroid (for Python), or online editors like Replit. But a laptop/PC is more comfortable for long-term coding.</p>
+</div>
+
+<div class="faq-item">
+  <h2>Do I need to be good at math to learn programming? <span>➕</span></h2>
+  <p>No! Basic logic is enough for most coding. Advanced math is only needed for fields like AI, ML, and data science.</p>
+</div>
+
+<div class="faq-item">
+  <h2>How do I stay consistent while learning? <span>➕</span></h2>
+  <p>Set small daily goals, build mini-projects, and track your progress. Motivation comes from results — consistency is more important than speed.</p>
+</div>
+
+<div class="faq-item">
+  <h2>Can I get a job without a CS degree? <span>➕</span></h2>
+  <p>Yes! Many developers are self-taught. Build projects, make a portfolio, and contribute to GitHub. Skills > Degree.</p>
+</div>
+
+  </div>    
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Tutorial Hub | FAQ</p>
+  </footer>
+
+  <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
+        const symbol = item.querySelector("span");
+        symbol.textContent = item.classList.contains("active") ? "➖" : "➕";
+      });
+    });
+  </script>
+
+  <script type="module" src="theme.js"></script>
+  <script type="module" src="backtotop.js"></script>
+  <script type="module" src="preloader.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog - My Tutorial Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="programming.html">Programming</a>
+      <a href="gamedev.html">Game Dev</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="spacer"></div>
+    <button id="theme-toggle">🌙 Dark</button>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="page fade-in">
+    <h1>Blog & Articles 📝</h1>
+    <p>Read tutorials, notes, and guides to boost your learning.</p>
+
+    <!-- Search Box -->
+    <input type="text" id="blogSearch" placeholder="🔍 Search blog posts..." />
+
+    <!-- Filter Buttons -->
+    <div class="blog-filters" style="margin: 20px 0;">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="programming">Programming</button>
+      <button class="filter-btn" data-filter="gamedev">Game Dev</button>
+    </div>
+
+    <!-- Blog List -->
+    <div class="blog-list" id="blogList">
+      <div class="blog-card" data-category="programming">
+        <h2><a href="post1.html">How to Start Learning Programming</a></h2>
+        <p class="date">Published: Sept 3, 2025</p>
+        <p>Confused where to start your coding journey? This article gives you a roadmap for beginners...</p>
+        <span class="tag">Programming</span>
+        <a href="post1.html" class="read-more">Read More →</a>
+      </div>
+
+      <div class="blog-card" data-category="gamedev">
+        <h2><a href="post2.html">Unity vs Unreal: Which Game Engine to Choose?</a></h2>
+        <p class="date">Published: Sept 3, 2025</p>
+        <p>Both Unity and Unreal are powerful game engines. Let’s compare them so you can choose wisely...</p>
+        <span class="tag">Game Dev</span>
+        <a href="post2.html" class="read-more">Read More →</a>
+      </div>
+
+      <div class="blog-card" data-category="programming">Post 3...</div>
+      <div class="blog-card" data-category="gamedev">Post 4...</div>
+      <div class="blog-card" data-category="programming">Post 5...</div>
+      <div class="blog-card" data-category="gamedev">Post 6...</div>
+      <div class="blog-card" data-category="programming">Post 7...</div>
+    </div>
+
+    <!-- Load More Button -->
+    <button id="loadMore" style="margin:20px auto; display:block; padding:10px 20px; border:none; background:#007bff; color:white; border-radius:6px; cursor:pointer;">
+      Load More ↓
+    </button>
+  </div>
+
+  <!-- Script -->
+  <script>
+  const blogCards = document.querySelectorAll(".blog-card");
+  const loadMoreBtn = document.getElementById("loadMore");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const searchInput = document.getElementById("blogSearch");
+
+  let visiblePosts = 3; // show 3 at start
+  let activeCategory = "all";
+  let searchQuery = "";
+
+  // Show posts depending on filter + search + load more
+  function showPosts() {
+    let count = 0;
+    blogCards.forEach((card) => {
+      const matchCategory = (activeCategory === "all" || card.dataset.category === activeCategory);
+      const matchSearch = card.innerText.toLowerCase().includes(searchQuery.toLowerCase());
+
+      if (matchCategory && matchSearch && count < visiblePosts) {
+        card.style.display = "block";
+        count++;
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    // hide button if no more posts
+    const totalMatch = [...blogCards].filter(card =>
+      (activeCategory === "all" || card.dataset.category === activeCategory) &&
+      card.innerText.toLowerCase().includes(searchQuery.toLowerCase())
+    ).length;
+    loadMoreBtn.style.display = count >= totalMatch ? "none" : "block";
+  }
+
+  // Load More click
+  loadMoreBtn.addEventListener("click", () => {
+    visiblePosts += 3;
+    showPosts();
+  });
+
+  // Category filter
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      activeCategory = button.dataset.filter;
+      visiblePosts = 3; // reset count when switching category
+      showPosts();
+    });
+  });
+
+  // Search filter
+  searchInput.addEventListener("input", () => {
+    searchQuery = searchInput.value.trim();
+    visiblePosts = 3; // reset count when searching
+    showPosts();
+  });
+
+  // Initial load
+  showPosts();
+</script>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Tutorial Hub | Blog Section</p>
+  </footer>
+
+  <script type="module" src="theme.js"></script>
+  <script type="module" src="backtotop.js"></script>
+  <script type="module" src="preloader.js"></script>
+</body>
+</html>

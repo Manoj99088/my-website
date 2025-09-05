@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programming Tutorials</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="programming.html">Programming</a>
+      <a href="gamedev.html">Game Dev</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="spacer"></div>
+    <button id="theme-toggle">🌙 Dark</button>
+  </nav>
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader"></div>
+  <p>Loading...</p>
+</div>
+
+
+  <!-- Page Content -->
+  <div class="page fade-in">
+    <h1>Programming Tutorials</h1>
+    <p>Search or filter programming tutorials below:</p>
+
+    <!-- 🔹 Search Bar -->
+    <input type="text" id="searchInput" placeholder="Search videos..." style="padding:8px; width: 100%; max-width: 400px; margin: 12px auto; display: block; border-radius:6px; border:1px solid #ccc;">
+
+    <!-- 🔹 Filter Buttons -->
+    <div style="margin:12px; text-align:center;">
+      <button class="filter-btn" data-category="all">All</button>
+      <button class="filter-btn" data-category="web">Web</button>
+      <button class="filter-btn" data-category="language">Languages</button>
+    </div>
+
+    <!-- 🔹 Videos -->
+    <div class="grid" id="videoGrid">
+      <div class="card video" data-title="HTML CSS" data-category="web">
+        <h2>Learn HTML & CSS</h2>
+        <iframe src="https://www.youtube.com/embed/mU6anWqZJcc" allowfullscreen></iframe>
+      </div>
+
+      <div class="card video" data-title="JavaScript Basics" data-category="web">
+        <h2>JavaScript Basics</h2>
+        <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" allowfullscreen></iframe>
+      </div>
+
+      <div class="card video" data-title="C Programming" data-category="language">
+        <h2>C Programming Full Course</h2>
+        <iframe src="https://www.youtube.com/embed/KJgsSFOSQv0" allowfullscreen></iframe>
+      </div>
+
+      <div class="card video" data-title="Java Tutorial" data-category="language">
+        <h2>Java Tutorial for Beginners</h2>
+        <iframe src="https://www.youtube.com/embed/eIrMbAQSU34" allowfullscreen></iframe>
+      </div>
+
+      <div class="card video" data-title="Python Tutorial" data-category="language">
+        <h2>Python Tutorial for Beginners</h2>
+        <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="theme.js"></script>
+  <script type="module" src="search.js"></script>
+  <script type="module" src="backtotop.js"></script>
+  <script type="module" src="preloader.js"></script>
+
+
+    <!-- Footer -->
+  <footer>
+    <p>© 2025 My Tutorial Hub | Built with ❤️</p>
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://youtube.com/@yourchannel" target="_blank">YouTube</a>
+      <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+    </div>
+    <div class="playlist-links">
+  <a href="python.html">🐍 Python</a>
+  <a href="java.html">☕ Java</a>
+  <a href="cpp.html">💻 C++</a>
+  <a href="javascript.html">⚡ JavaScript</a>
+</div>
+
+  </footer>
+  <!-- Back to Top Button -->
+  <button id="backToTop">⬆ Top</button>
+
+</body>
+</html>
