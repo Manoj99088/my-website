@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Tutorial Hub</title>
+  <script type="module" crossorigin src="/my-website/assets/index-DFjI5aYo.js"></script>
+  <link rel="stylesheet" crossorigin href="/my-website/assets/index-BfcMFz_O.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="programming.html">Programming</a>
+      <a href="gamedev.html">Game Dev</a>
+      <a href="blog.html">Blog</a>
+      <a href="resources.html">Resources</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="spacer"></div>
+    <button id="theme-toggle">🌙 Dark</button>  
+  </nav>
+  <!-- Hero Section -->
+<section class="hero fade-in">
+  <div class="hero-content">
+    <h1>Welcome to My Tutorial Hub 🚀</h1>
+    <p>Learn Programming & Game Development with the best tutorials in one place.</p>
+    <a href="programming.html" class="hero-btn">Start Learning</a>
+  </div>
+</section>
+
+    <!-- Newsletter Section -->
+<section class="newsletter fade-in">
+  <h2>📩 Subscribe to My Newsletter</h2>
+  <p>Get the latest programming & game dev tutorials delivered to your inbox!</p>
+  <form id="newsletter-form" style="display:flex; gap:10px; max-width:400px; margin:auto;">
+    <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required 
+           style="flex:1; padding:10px; border-radius:6px; border:1px solid #ccc;">
+    <button type="submit" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer;">Subscribe</button>
+  </form>
+  <p id="newsletter-status" style="margin-top:10px;"></p>
+</section>
+
+
+<!-- Stats Section -->
+<section class="stats fade-in">
+  <h2>📊 Our Impact</h2>
+  <div class="stats-grid">
+    <div class="stat">
+      <span class="count" data-target="100">0</span>+
+      <p>Tutorials</p>
+    </div>
+    <div class="stat">
+      <span class="count" data-target="5000">0</span>+
+      <p>Views</p>
+    </div>
+    <div class="stat">
+      <span class="count" data-target="1000">0</span>+
+      <p>Learners</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials fade-in">
+  <h2>⭐ What Learners Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial">
+      <p>“This website helped me start learning Python step by step. Super beginner-friendly!”</p>
+      <h4>— Rahul, Student</h4>
+    </div>
+    <div class="testimonial">
+      <p>“The game dev tutorials are amazing. I created my first Unity project thanks to this site!”</p>
+      <h4>— Aditi, Aspiring Game Developer</h4>
+    </div>
+    <div class="testimonial">
+      <p>“Everything is so well organized: tutorials, blog, and resources in one place. Love it!”</p>
+      <h4>— Karan, Developer</h4>
+    </div>
+  </div>
+</section>
+
+
+<!-- Featured Sections -->
+<section class="featured fade-in">
+  <h2>Explore Our Sections</h2>
+  <div class="featured-grid">
+
+
+    <!-- Programming -->
+    <div class="featured-card">
+      <h3>💻 Programming</h3>
+      <p>Learn Python, Java, C++, and JavaScript step by step with tutorials.</p>
+      <a href="programming.html" class="card-btn">Start Coding</a>
+    </div>
+
+    <!-- Game Dev -->
+    <div class="featured-card">
+      <h3>🎮 Game Development</h3>
+      <p>Create amazing games with Unity and Unreal Engine tutorials.</p>
+      <a href="gamedev.html" class="card-btn">Start Building</a>
+    </div>
+
+    <!-- Blog -->
+    <div class="featured-card">
+      <h3>📝 Blog</h3>
+      <p>Read articles, guides, and tips to grow faster as a developer.</p>
+      <a href="blog.html" class="card-btn">Read Blog</a>
+    </div>
+
+    <!-- Resources -->
+    <div class="featured-card">
+      <h3>📚 Resources</h3>
+      <p>Access cheat sheets, docs, and developer tools in one place.</p>
+      <a href="resources.html" class="card-btn">View Resources</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader"></div>
+  <p>Loading...</p>
+</div>
+
+
+  <!-- Main Page -->
+  <div class="page fade-in">
+    <h1>Welcome to My Tutorial Hub</h1>
+    <p>Learn Programming & Game Development with curated YouTube tutorials!</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Python Basics</h2>
+        <iframe src="https://www.youtube.com/embed/kqtD5dpn9C8" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <h2>Unity Game Development</h2>
+        <iframe src="https://www.youtube.com/embed/IlKaB1etrik" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <h2>HTML & CSS Full Course</h2>
+        <iframe src="https://www.youtube.com/embed/mU6anWqZJcc" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- Footer -->
+  <footer>
+    <p>© 2025 My Tutorial Hub | Built with ❤️</p>
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://youtube.com/@yourchannel" target="_blank">YouTube</a>
+      <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+    </div>
+  </footer>
+  <!-- Back to Top Button -->
+  <button id="backToTop">⬆ Top</button>
+  <script>
+  const form = document.getElementById("newsletterForm");
+  const msg = document.getElementById("msg");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    msg.textContent = "✅ Thanks for subscribing! (This is a demo)";
+    form.reset();
+  });
+</script>
+<script>
+  // Stats Animation
+  const counters = document.querySelectorAll(".count");
+
+  const animateCounts = () => {
+    counters.forEach(counter => {
+      counter.innerText = "0";
+      const target = +counter.getAttribute("data-target");
+      const increment = target / 100; // speed control
+
+      const updateCounter = () => {
+        const current = +counter.innerText;
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+  };
+
+  // Trigger animation on scroll
+  let statsShown = false;
+  window.addEventListener("scroll", () => {
+    const statsSection = document.querySelector(".stats");
+    const position = statsSection.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (!statsShown && position < screenHeight - 50) {
+      animateCounts();
+      statsShown = true;
+    }
+  });
+</script>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>My Tutorial Hub</h3>
+      <p>Your one-stop platform for coding tutorials, game dev guides, and learning resources.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="programming.html">Programming</a></li>
+        <li><a href="gamedev.html">Game Dev</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-social">
+      <h4>Follow Us</h4>
+      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube"></a>
+      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub"></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 My Tutorial Hub | All Rights Reserved</p>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
