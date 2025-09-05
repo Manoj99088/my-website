@@ -1,18 +1,26 @@
-const newsletterForm = document.getElementById("newsletter-form");
-const newsletterStatus = document.getElementById("newsletter-status");
+const form = document.getElementById('newsletter-form');
+const status = document.getElementById('newsletter-status');
 
-newsletterForm?.addEventListener("submit", function(e) {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("newsletter-email").value;
+  try {
+    const res = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
 
-  // Simple mock (you can later connect Mailchimp, ConvertKit, etc.)
-  if (email.includes("@")) {
-    newsletterStatus.innerText = "✅ Subscribed successfully!";
-    newsletterStatus.style.color = "green";
-    newsletterForm.reset();
-  } else {
-    newsletterStatus.innerText = "❌ Please enter a valid email.";
-    newsletterStatus.style.color = "red";
+    if (res.ok) {
+      status.textContent = "🎉 Thank you for subscribing!";
+      status.style.color = "green";
+      form.reset();
+    } else {
+      status.textContent = "⚠️ Oops! Something went wrong.";
+      status.style.color = "red";
+    }
+  } catch (err) {
+    status.textContent = "⚠️ Network error. Try again.";
+    status.style.color = "red";
   }
 });

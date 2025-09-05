@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic SEO -->
+<meta name="description" content="Learn programming & game development with curated tutorials, resources, and beginner-friendly guides.">
+<link rel="canonical" href="https://manoj99088.github.io/my-website/">
+
+<!-- Open Graph (Facebook / LinkedIn / WhatsApp) -->
+<meta property="og:title" content="My Tutorial Hub">
+<meta property="og:description" content="Curated tutorials for programming & game dev.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://manoj99088.github.io/my-website/">
+<meta property="og:image" content="https://manoj99088.github.io/my-website/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My Tutorial Hub">
+<meta name="twitter:description" content="Curated tutorials for programming & game dev.">
+<meta name="twitter:image" content="https://manoj99088.github.io/my-website/og-image.png">
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Tutorial Hub</title>
@@ -20,7 +37,9 @@
       <a href="about.html">About</a>
     </div>
     <div class="spacer"></div>
-    <button id="theme-toggle">🌙 Dark</button>  
+    <button id="theme-toggle">🌙 Dark</button> 
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+ 
   </nav>
   <!-- Hero Section -->
 <section class="hero fade-in">
@@ -31,56 +50,48 @@
   </div>
 </section>
 
-    <!-- Newsletter Section -->
-<section class="newsletter fade-in">
+   <section class="newsletter fade-in">
   <h2>📩 Subscribe to My Newsletter</h2>
   <p>Get the latest programming & game dev tutorials delivered to your inbox!</p>
-  <form id="newsletter-form" style="display:flex; gap:10px; max-width:400px; margin:auto;">
-    <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required 
+
+  <!-- ✅ Updated form with Formspree -->
+  <form action="https://formspree.io/f/https://formspree.io/f/mnnboopn" method="POST" id="newsletter-form" style="display:flex; gap:10px; max-width:400px; margin:auto;">
+    <input type="email" name="email" placeholder="Enter your email" required 
            style="flex:1; padding:10px; border-radius:6px; border:1px solid #ccc;">
-    <button type="submit" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer;">Subscribe</button>
+    <button type="submit" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer;">
+      Subscribe
+    </button>
   </form>
+
+  <!-- ✅ Status message -->
   <p id="newsletter-status" style="margin-top:10px;"></p>
 </section>
+
 
 
 <!-- Stats Section -->
 <section class="stats fade-in">
   <h2>📊 Our Impact</h2>
   <div class="stats-grid">
-    <div class="stat">
-      <span class="count" data-target="100">0</span>+
-      <p>Tutorials</p>
-    </div>
-    <div class="stat">
-      <span class="count" data-target="5000">0</span>+
-      <p>Views</p>
-    </div>
-    <div class="stat">
-      <span class="count" data-target="1000">0</span>+
-      <p>Learners</p>
+    <div class="stats">
+  <div class="stat"><span class="count" data-target="120">0</span>+<div>Tutorials</div></div>
+  <div class="stat"><span class="count" data-target="5600">0</span>+<div>Views</div></div>
+  <div class="stat"><span class="count" data-target="350">0</span>+<div>Learners</div></div>
+</div>
+
     </div>
   </div>
 </section>
 
-<!-- Testimonials Section -->
 <section class="testimonials fade-in">
-  <h2>⭐ What Learners Say</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial">
-      <p>“This website helped me start learning Python step by step. Super beginner-friendly!”</p>
-      <h4>— Rahul, Student</h4>
-    </div>
-    <div class="testimonial">
-      <p>“The game dev tutorials are amazing. I created my first Unity project thanks to this site!”</p>
-      <h4>— Aditi, Aspiring Game Developer</h4>
-    </div>
-    <div class="testimonial">
-      <p>“Everything is so well organized: tutorials, blog, and resources in one place. Love it!”</p>
-      <h4>— Karan, Developer</h4>
-    </div>
+  <h2>💬 What Learners Say</h2>
+  <div class="t-track">
+    <div class="t-card">“This website helped me start learning Python…” — Rahul</div>
+    <div class="t-card">“The game dev tutorials are amazing…” — Aditi</div>
+    <div class="t-card">“Well organized: tutorials, blog, resources…” — Karan</div>
   </div>
 </section>
+
 
 
 <!-- Featured Sections -->
@@ -154,6 +165,11 @@
   <script type="module" src="backtotop.js"></script>
 <script type="module" src="preloader.js"></script>
 <script type="module" src="newsletter.js"></script>
+<script type="module" src="nav.js"></script>
+<script type="module" src="countup.js"></script>
+
+
+
 
 
     <!-- Footer -->
@@ -246,8 +262,6 @@
     <p>© 2025 My Tutorial Hub | All Rights Reserved</p>
   </div>
 </footer>
-
-
 
 
 </body>
