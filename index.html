@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Tutorial Hub</title>
-  <script type="module" crossorigin src="/my-website/assets/index-D_Mb84gR.js"></script>
-  <link rel="stylesheet" crossorigin href="/my-website/assets/index-rKLM6j0y.css">
+  <script type="module" crossorigin src="/my-website/assets/index-TwOheTOj.js"></script>
+  <link rel="stylesheet" crossorigin href="/my-website/assets/index-Cf3sGMEE.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -34,17 +34,23 @@
   </div>
 </section>
 
-    <!-- Newsletter Section -->
-<section class="newsletter fade-in">
+   <section class="newsletter fade-in">
   <h2>📩 Subscribe to My Newsletter</h2>
   <p>Get the latest programming & game dev tutorials delivered to your inbox!</p>
-  <form id="newsletter-form" style="display:flex; gap:10px; max-width:400px; margin:auto;">
-    <input type="email" id="newsletter-email" name="email" placeholder="Enter your email" required 
+
+  <!-- ✅ Updated form with Formspree -->
+  <form action="https://formspree.io/f/https://formspree.io/f/mnnboopn" method="POST" id="newsletter-form" style="display:flex; gap:10px; max-width:400px; margin:auto;">
+    <input type="email" name="email" placeholder="Enter your email" required 
            style="flex:1; padding:10px; border-radius:6px; border:1px solid #ccc;">
-    <button type="submit" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer;">Subscribe</button>
+    <button type="submit" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:6px; cursor:pointer;">
+      Subscribe
+    </button>
   </form>
+
+  <!-- ✅ Status message -->
   <p id="newsletter-status" style="margin-top:10px;"></p>
 </section>
+
 
 
 <!-- Stats Section -->
@@ -61,24 +67,15 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
 <section class="testimonials fade-in">
-  <h2>⭐ What Learners Say</h2>
-  <div class="testimonials-grid">
-    <div class="testimonial">
-      <p>“This website helped me start learning Python step by step. Super beginner-friendly!”</p>
-      <h4>— Rahul, Student</h4>
-    </div>
-    <div class="testimonial">
-      <p>“The game dev tutorials are amazing. I created my first Unity project thanks to this site!”</p>
-      <h4>— Aditi, Aspiring Game Developer</h4>
-    </div>
-    <div class="testimonial">
-      <p>“Everything is so well organized: tutorials, blog, and resources in one place. Love it!”</p>
-      <h4>— Karan, Developer</h4>
-    </div>
+  <h2>💬 What Learners Say</h2>
+  <div class="t-track">
+    <div class="t-card">“This website helped me start learning Python…” — Rahul</div>
+    <div class="t-card">“The game dev tutorials are amazing…” — Aditi</div>
+    <div class="t-card">“Well organized: tutorials, blog, resources…” — Karan</div>
   </div>
 </section>
+
 
 
 <!-- Featured Sections -->
@@ -147,6 +144,7 @@
       </div>
     </div>
   </div>
+
 
 
 
@@ -242,8 +240,6 @@
     <p>© 2025 My Tutorial Hub | All Rights Reserved</p>
   </div>
 </footer>
-
-
 
 
 </body>
